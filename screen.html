@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Screen Yourself</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+  	&nbsp; &nbsp;
+  	<img src="icons/logo96x96.png" height=35 width=35> &nbsp; &nbsp;
+    <a class="navbar-brand" href="index.html">MENTAL HEALTH</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Screen</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+      	<p class="fst-italic text-danger">To think too much is a disease.</p> 
+      </span>
+    </div>
+  </div>
+</nav>
+
+
+<!-- FREECODECAMP.ORG FORM -->
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Preliminary Screening</h1>
+    <p id="description" class="description text-center">
+      The test result is indicative only. Medical consultation is always advised.
+    </p>
+  </header>
+  <form id="survey-form" action="https://script.google.com/macros/s/AKfycbz9rcBZnDz8KmDIeDZjRqSHmy9QD29ZG3_8dJ_kWiFK5KL7riZQe4HT3VY825aaKWlW/exec">
+    <div class="form-group">
+      <label id="name-label" for="name">What is your name?</label>
+      <input
+        type="text"
+        name="NAME"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label id="email-label" for="email">What is your email address?</label>
+      <input
+        type="email"
+        name="EMAIL"
+        id="email"
+        class="form-control"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+    
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >How young are you?<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        name="AGE"
+        id="number"
+        min="10"
+        max="99"
+        class="form-control"
+        placeholder="Enter age in years"
+      />
+    </div>
+
+    <div class="form-group">
+      <p>Which gender do you identify as?</p>
+      <label>
+      <input
+          name="GENDER"
+          value="female"
+          type="radio"
+          class="input-radio"
+        />Female</label
+      >
+      <label>
+      <input
+          name="GENDER"
+          value="male"
+          type="radio"
+          class="input-radio"
+        />Male</label
+      >
+      <input
+          name="GENDER"
+          value="other"
+          type="radio"
+          class="input-radio"
+        />Other</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>Do you experience work-life imbalance?</p>
+      <select id="dropdown" name="WORK-LIFE-IMBALANCE" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+    </div>
+
+
+
+    <!-- <div class="form-group">
+      <p>Does your job involve remote work?</p>
+      <label>
+      <input
+          name="REMOTE-WORK"
+          value="true"
+          type="radio"
+          class="input-radio"
+        />Yes</label
+      >
+      <label>
+      <input
+          name="REMOTE-WORK"
+          value="false"
+          type="radio"
+          class="input-radio"
+        />No</label
+      >
+    </div> -->
+
+
+    <div class="form-group">
+      <p>How convenient do you find asking for leave?</p>
+      <select id="dropdown" name="LEAVE-OPTIONS" class="form-control" required>
+        <option disabled selected value>Select scale</option>
+        <option value="3">Easy</option>
+        <option value="2">Somewhat easy</option>
+        <option value="1">Difficult</option>
+      </select>
+    </div>
+
+
+
+    <!-- <div class="form-group">
+      <p>Does your employer offer healthcare benefits?</p>
+      <label>
+        <input
+          name="HEALTHCARE-BENEFITS"
+          value="true"
+          type="radio"
+          class="input-radio"
+          checked
+        />Yes</label
+      >
+      <label>
+        <input
+          name="HEALTHCARE-BENEFITS"
+          value="false"
+          type="radio"
+          class="input-radio"
+        />No</label
+      >
+
+      <label
+        ><input
+          name="HEALTHCARE-BENEFITS"
+          value="not_sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
+    </div> -->
+
+    <div class="form-group">
+      <p>
+        Does your family history involve cases of mental health issue?
+      </p>
+      <select id="family_history" name="FAMILY-HISTORY" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+    </div>
+
+    <!-- <div class="form-group">
+      <p>Have you undergone any wellness program in the past?</p>
+      <label>
+        <input
+          name="WELLNESS-PROGRAM"
+          value="false"
+          type="radio"
+          class="input-radio"
+          checked
+        />No</label
+      >
+      <label>
+        <input
+          name="WELLNESS-PROGRAM"
+          value="true"
+          type="radio"
+          class="input-radio"
+        />Yes</label
+      >
+
+      <label
+        ><input
+          name="WELLNESS-PROGRAM"
+          value="not_sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
+    </div> -->
+
+    <div class="form-group">
+      <p>Is there anything else you would want to tell us?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="REMARKS"
+        placeholder="Enter comment"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- FOOTER -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="text-muted">© Ritik Mehta</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+
+      <!-- FACEBOOK -->
+      <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/MoHFWIndia/"><img src="icons/facebook.png" width="34" height="34"></a></li>
+
+      <!-- GOOGLE -->
+      <li class="ms-3"><a class="text-muted" href="https://www.google.com/search?q=learn+about+mental+health&rlz=1C1SQJL_enIN975IN975&sclient=gws-wiz-serp"><img src="icons/google.png" width="32" height="32"></a></li>
+
+      <!-- INSTAGRAM -->
+      <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/mentalhealthtalksindia/?hl=en"><img src="icons/instagram.png" width="34" height="34"></a></li>
+
+      <!-- YOUTUBE -->
+      <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/results?sp=mAEB&search_query=what+is+mental+health"><img src="icons/youtube.png" width="34" height="34"></a></li>
+    </ul>
+  </footer>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
